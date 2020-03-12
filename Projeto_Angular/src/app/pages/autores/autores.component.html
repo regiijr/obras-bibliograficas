@@ -1,0 +1,21 @@
+<div class="interna">
+<div class="titulo" style="font-size:xx-large; font-weight:bold ;">Teste de software</div>
+<app-error></app-error>
+<div class="row ">
+  <div class="column">Qtd de inserção:</div>
+  <div class="column"><input [(ngModel)]="qtdInserir" id="qtdInserir" name="qtdInserir"></div>
+</div> 
+<br>
+  <div class="row">
+    <div class="column">Nome do autor:</div>
+    <div class="column"><input [(ngModel)]="name" placeholder="nome do autor"id="name" name="name"></div>
+  </div>
+  <br>
+ <button (click)="sendName(name)"color="primary" >Enviar</button>
+ <br>
+ <p style="color: blue;">{{entrada.length}} autores registrados no total, {{qtdInserida}} registrado agora.</p>
+ <div style=" overflow: auto; height: 300px;" *ngIf="entrada.length > 0" class="row">
+ <p *ngFor="let name of entrada">{{name.name}}</p>
+ </div>
+</div>
+
